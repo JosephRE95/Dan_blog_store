@@ -30,12 +30,9 @@ function Search() {
             await getUserById(1).then((user) =>
                 setUser(user)
             );
-            console.log(user);
         }
         fetch();
     }, [Login]);
-
-    console.log(params.filter)
 
     searchPost(params.filter)
 
@@ -57,66 +54,56 @@ function Search() {
         window.location.reload()
     }
 
-
     function UserList() {
-
         if (posts === null || !posts) return
         return posts.map((p) => {
             if (Auth === user.username) {
                 return (
                     <div className="post" key={p.postId}>
-                        <div className="postInfo">
-                            <span className="postTitle">
-                                <span to="/post/abc">
-                                    {p.title}
-                                </span>
-                            </span>
-                            <hr />
-                            <span className="postDate">
-                                <SimpleDateTime dateFormat="MDY" dateSeparator="/" showTime='0'>{p.updatedAt}</SimpleDateTime>
-                                <hr />
-                                <SimpleDateTime dateFormat="MDY" showDate='0' timeSeparator=":" meridians="1">{p.updatedAt}</SimpleDateTime>
-                            </span>
-                        </div>
-                        <p className="postDesc">
-                            {p.post}
-                        </p>
-                        <span className="postCat">
-                            <Link className="link" to={`/post/${p.postId}`}>
-                                VIEW MORE
-                            </Link>
+                      <div className="postInfo">
+                        <a href={`/post/${p.postId}`} class="no-underline">
+                          <span className="postTitle">
+                            {p.title}
+                          </span>
+                        </a>
+                        <hr />
+                        <span className="postDate">
+                          <SimpleDateTime dateFormat="MDY" dateSeparator="/" showTime='0'>{p.updatedAt}</SimpleDateTime>
+                          <hr />
+                          <SimpleDateTime dateFormat="MDY" showDate='0' timeSeparator=":" meridians="1">{p.updatedAt}</SimpleDateTime>
                         </span>
+                      </div>
+                      <p className="postDesc">
+                        {p.post}
+                      </p>
+                      <div classname='postButtons'>
                         <a href={`/post/${p.postId}/Edit`}><Button className="glow-on-hover">Edit</Button></a>
                         <Button className="glow-on-hover" variant="danger" onClick={handleDeletePost.bind(this, p.postId)}>Delete</Button>
+                      </div>
                     </div>
-                )
-            }
-            else {
-                return (
+                  )
+                }
+                else {
+                  return (
                     <div className="post" key={p.postId}>
-                        <div className="postInfo">
-                            <span className="postTitle">
-                                <span to="/post/abc">
-                                    {p.title}
-                                </span>
-                            </span>
-                            <hr />
-                            <span className="postDate">
-                                <SimpleDateTime dateFormat="MDY" dateSeparator="/" showTime='0'>{p.updatedAt}</SimpleDateTime>
-                                <hr />
-                                <SimpleDateTime dateFormat="MDY" showDate='0' timeSeparator=":" meridians="1">{p.updatedAt}</SimpleDateTime>
-                            </span>
-                        </div>
-                        <p className="postDesc">
-                            {p.post}
-                        </p>
-                        <span className="postCat">
-                            <Link className="link" to={`/post/${p.postId}`}>
-                                VIEW MORE
-                            </Link>
+                      <div className="postInfo">
+                        <a href={`/post/${p.postId}`} class="no-underline">
+                          <span className="postTitle">
+                            {p.title}
+                          </span>
+                        </a>
+                        <hr />
+                        <span className="postDate">
+                          <SimpleDateTime dateFormat="MDY" dateSeparator="/" showTime='0'>{p.updatedAt}</SimpleDateTime>
+                          <hr />
+                          <SimpleDateTime dateFormat="MDY" showDate='0' timeSeparator=":" meridians="1">{p.updatedAt}</SimpleDateTime>
                         </span>
+                      </div>
+                      <p className="postDesc">
+                        {p.post}
+                      </p>
                     </div>
-                )
+                  )
             }
         })
     }

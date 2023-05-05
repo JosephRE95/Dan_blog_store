@@ -1,7 +1,5 @@
-import TopBar from "../../components/topbar/TopBar";
 import "./bookstore.css";
 import { Button, Col, Row } from 'react-bootstrap';
-
 
 
 export default function BookStore() {
@@ -10,8 +8,6 @@ export default function BookStore() {
     <>
       <div>
         <img className="headerImg" src={'/Images/bookstore-bg-banner.png'} alt="" />
-      
-
       <div className="caterLight">
         <Row>
           <Col id='bookImage'>
@@ -24,7 +20,6 @@ export default function BookStore() {
             </Col>
           </Col>
           <Col>
-          
           <div id="bookSectionLight">
               <h4 className="bookTitle">  Deep Delta T: </h4>
               <p className="bookDetailLight"> (Book 1 of Delta T Trilogy)</p>
@@ -65,7 +60,6 @@ export default function BookStore() {
           </Col>
         </Row>
       </div>
-
       <div className="caterLight">
         <Row>
           <Col id='bookImage'>
@@ -93,7 +87,6 @@ export default function BookStore() {
           </Col>
         </Row>
       </div>
-
       <div className="caterDark">
         <Row>
           <Col id='bookImage'>
@@ -122,7 +115,6 @@ export default function BookStore() {
           </Col>
         </Row>
       </div>
-
       <div className="caterLight">
         <Row>
           <Col id='bookImage'>
@@ -153,7 +145,6 @@ export default function BookStore() {
           </Col>
         </Row>
       </div>
-
       <div className="caterDark">
         <Row>
           <Col id='bookImage'>

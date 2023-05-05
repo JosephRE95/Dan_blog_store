@@ -15,15 +15,12 @@ export default function Footer() {
                                     <img src={process.env.PUBLIC_URL + '/Images/logofinal-navbar.png'} height="120" alt="Evince" />
                                 </a>
                             </div>
-
                             <div className="footerCenter">
-                                {/* <ul className="footerList"> */}
                                 <span className="footerListItem">
                                     <Link className="footerLink" to="/">
                                         HOME{" "}
                                     </Link>
                                 </span>
-
                                 <span className="footerListItem">
                                     <Link className="footerLink" to="/about">
                                        | ABOUT |
@@ -36,12 +33,11 @@ export default function Footer() {
                                 </span>
                                 <li className="footerListItem">
                                 </li>
-                                {/* </ul> */}
                             </div>
                         </Col>
                         <p className="p" >Contact me: 345lemaire@gmail.com 
                         <br/>
-                        © 2023 Evince. All rights reserved | Created By: JYT WEB DESIGNS</p>
+                        © 2023 Evince. All rights reserved | Created By: JYT WEB DEVELOPMENT & DESIGNS</p>
                     </Row>
                 </footer>
             </section>

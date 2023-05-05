@@ -27,7 +27,6 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-
                 <div>
                     <Row>
                         <Col id="aboutBookImage" xs={12} md={6} lg={6}>

@@ -32,7 +32,6 @@ function AddPost() {
 
   return (
     <div id="form" xs={12} md={6} lg={4}>
-    
       <Form onSubmit={handleSubmit}>
         <Row className=" justify-content-center" id="write-card">
         <br/>
@@ -48,7 +47,7 @@ function AddPost() {
             <Row className=" justify-content-center" id="write-card-title">
               <InputGroup.Text>Whats On Your Mind?</InputGroup.Text>
             </Row>
-            <Form.Control as="textarea" aria-label="With textarea" name="description" value={description} onChange={handleChange} />
+            <Form.Control as="textarea" aria-label="With textarea" rows='10' name="description" value={description} onChange={handleChange} />
           </InputGroup>
           <br/>
         </Row>
@@ -56,29 +55,8 @@ function AddPost() {
           <Button id="writeFormButton" type="submit" className="mt-4 mb-4 ly-0">POST</Button>
         </Row>
       </Form>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-    </div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
   )
 }
 

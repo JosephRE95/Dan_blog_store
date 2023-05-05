@@ -47,24 +47,9 @@ export default function Post() {
           return <>
             {postList.map((p) => {
               if (Auth === user.username) {
-
-
                 return (
                   <div className="post" key={p.postId}>
-
                     <div className="postInfo">
-                      <div className="postCats">
-                        <span className="postCat">
-                          <Link className="link" to={`/post/${p.postId}`}>
-                            {/* Music */}
-                          </Link>
-                        </span>
-                        <span className="postCat">
-                          <span className="link" to="/posts?cat=Music">
-                            {/* Life */}
-                          </span>
-                        </span>
-                      </div>
                       <a href={`/post/${p.postId}`} class="no-underline">
                         <span className="postTitle">
                           {p.title}
@@ -81,29 +66,16 @@ export default function Post() {
                       {p.post}
                     </p>
                     <div classname='postButtons'>
-                    <a href={`/post/${p.postId}/Edit`}><Button className="glow-on-hover">Edit</Button></a>
-                    <Button className="glow-on-hover" variant="danger" onClick={handleDeletePost.bind(this, p.postId)}>Delete</Button>
-                  </div>
+                      <a href={`/post/${p.postId}/Edit`}><Button className="glow-on-hover">Edit</Button></a>
+                      <Button className="glow-on-hover" variant="danger" onClick={handleDeletePost.bind(this, p.postId)}>Delete</Button>
+                    </div>
                   </div>
                 )
               }
               else {
                 return (
                   <div className="post" key={p.postId}>
-
                     <div className="postInfo">
-                      <div className="postCats">
-                        <span className="postCat">
-                          <Link className="link" to={`/post/${p.postId}`}>
-                            {/* Music */}
-                          </Link>
-                        </span>
-                        <span className="postCat">
-                          <span className="link" to="/posts?cat=Music">
-                            {/* Life */}
-                          </span>
-                        </span>
-                      </div>
                       <a href={`/post/${p.postId}`} class="no-underline">
                         <span className="postTitle">
                           {p.title}
@@ -126,7 +98,6 @@ export default function Post() {
           </>
         }
       }
-
     </PostContext.Consumer>
   );
 }

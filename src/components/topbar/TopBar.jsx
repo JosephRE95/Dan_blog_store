@@ -6,7 +6,6 @@ import Login from "../../pages/login/Login";
 import { Button, Form, Row, Col, Navbar, NavDropdown, Nav } from "react-bootstrap";
 
 
-
 // Documentations for the functions used for this page
 // useContext Hook: https://reactjs.org/docs/hooks-reference.html#usecontext
 // useParams Hook: https://reactrouter.com/web/api/Hooks/useparams
@@ -116,7 +115,6 @@ export default function Topbar() {
                   </Row>
                 </div>
               </div>
-
             </Navbar.Collapse>
           </Navbar>
         </>
@@ -144,9 +142,6 @@ export default function Topbar() {
               <Nav className="mr-auto smallNav">
                 <Nav.Link className="link" to="/" href="/">
                   HOME
-                </Nav.Link>
-                <Nav.Link className="link" to="/A9B8C7D6E5F4G3H2I1" href="/A9B8C7D6E5F4G3H2I1">
-                  LOGIN
                 </Nav.Link>
                 <Nav.Link className="link" href="about">ABOUT</Nav.Link>
                 <Nav.Link className="link" to="/bookstore" href="bookstore">
@@ -178,16 +173,12 @@ export default function Topbar() {
                   </Row>
                 </div>
               </div>
-
             </Navbar.Collapse>
           </Navbar>
         </>
-
-
       )
     }
   }
-
 
   return (
     <>

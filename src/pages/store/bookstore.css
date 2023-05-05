@@ -9,9 +9,6 @@
 
 .caterLight {
   border-top: none;
-  /* border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white; */
   padding: 5rem;
   overflow: auto;
   text-align: start;
@@ -20,9 +17,6 @@
 
 .caterDark {
   border-top: none;
-  /* border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white; */
   padding: 5rem;
   overflow: auto;
   text-align: start;
